@@ -10,12 +10,12 @@
 </head>
 <body>
 
-<!-- NAVBAR dengan toggler -->
+
 <nav class="navbar navbar-expand-lg navbar-light shadow-sm">
   <div class="container">
     <a class="navbar-brand fw-bold" href="index.html">BlueMist Nail Studio</a>
 
-    <!-- Tombol toggler untuk HP -->
+    <
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu" aria-controls="navMenu" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -90,7 +90,7 @@
 
 <footer class="footer"><div class="container"><p>&copy; 2025 BlueMist Nail Studio</p></div></footer>
 
-<!-- Bootstrap JS untuk tombol toggler -->
+
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 
 <script>
@@ -101,7 +101,7 @@ function addToCart(id){const cart=getCart();const it=cart.find(i=>i.id===id);if(
 function updateCartCount(){const c=getCart();const sum=c.reduce((s,i)=>s+i.qty,0);const el=document.getElementById('cartCount');if(el)el.textContent=sum;}
 updateCartCount();window.addEventListener('storage',updateCartCount);
 
-// initial sample reviews
+
 const SAMPLE_REVIEWS = [
   {name:'Ayu',prod:'Premium Soft Blue Gel Polish',rate:5,text:'Warnanya cantik dan tahan lama. Sangat puas!',date:'2025-01-10'},
   {name:'Dina',prod:'NailArt Starter Kit',rate:4,text:'Alatnya lengkap, cuma butuh belajar sedikit lagi. Recommended.',date:'2025-02-02'},
@@ -114,7 +114,7 @@ const SAMPLE_REVIEWS = [
 function getReviews(){return JSON.parse(localStorage.getItem('nail_reviews'))||SAMPLE_REVIEWS;}
 function saveReviews(r){localStorage.setItem('nail_reviews',JSON.stringify(r));}
 
-// star click
+
 const rStars=document.getElementById('rStars');
 rStars.addEventListener('click',(e)=>{
   if(e.target.dataset && e.target.dataset.val){
@@ -124,7 +124,7 @@ rStars.addEventListener('click',(e)=>{
   }
 });
 
-// render
+
 function renderReviews(){
   const list=getReviews();
   const el=document.getElementById('reviewsList');
@@ -148,7 +148,7 @@ function renderReviews(){
   });
 }
 
-// submit review
+
 document.getElementById('reviewForm').addEventListener('submit',(e)=>{
   e.preventDefault();
   const name=document.getElementById('rName').value||'Anonim';
